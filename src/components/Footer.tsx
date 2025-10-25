@@ -1,17 +1,42 @@
 import React, { useEffect, useState } from "react";
 import FetchLastFM from "../utils/LastFM";
 
+interface LastFMResponse {
+  recenttracks: {
+    track: LastFMTrack[];
+  };
+}
+
+interface LastFMAttr {
+  nowplaying?: string;
+}
+
+interface LastFMArtist {
+  "#text": string;
+}
+
+interface LastFMTrack {
+  name: string;
+  artist: LastFMArtist;
+  "@attr"?: LastFMAttr;
+}
+
 export const Footer = (): React.JSX.Element => {
   const [status, setStatus] = useState("Loading...");
 
   const nowPlaying = async () => {
-    const data = await FetchLastFM();
-    const recentTracks = data.recenttracks.track[0];
+    try {
+      const data: LastFMResponse = await FetchLastFM();
+      const recentTracks = data.recenttracks.track[0];
 
-    if (recentTracks?.["@attr"]?.nowplaying) {
-      setStatus("online");
-    } else {
-      setStatus("offline");
+      if (recentTracks?.["@attr"]?.nowplaying) {
+        setStatus("online");
+      } else {
+        setStatus("offline");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("Error fetching data");
     }
   };
   useEffect(() => {

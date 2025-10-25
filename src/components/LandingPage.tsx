@@ -10,22 +10,6 @@ const Links = {
 } as const;
 
 export const LandingPage = (): React.JSX.Element => {
-  const [hover, setHover] = useState<boolean>(false);
-  useEffect(() => {
-    const showTimer = setTimeout(() => {
-      setHover(true);
-
-      // Hide after 5 seconds
-      const timer = setTimeout(() => {
-        setHover(false);
-      }, 5000);
-
-      return () => clearTimeout(timer);
-    }, 1000);
-
-    return () => clearTimeout(showTimer);
-  }, []);
-
   return (
     <div className=" bg-[#09090B]  flex flex-col justify-center items-center px-6 sm:px-20 md:px-40 lg:px-60 min-h-screen">
       <h1 className="text-center text-amber-50 font-mono text-4xl sm:text-6xl lg:text-7xl mb-4">
