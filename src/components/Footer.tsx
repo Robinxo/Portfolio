@@ -26,19 +26,23 @@ export const Footer = (): React.JSX.Element => {
 
   const nowPlaying = async () => {
     try {
-      const data: LastFMResponse | null = await FetchLastFM();
-      const recentTracks = data.recenttracks.track[0];
+      const data = (await FetchLastFM()) as LastFMResponse | null;
 
-      if (recentTracks?.["@attr"]?.nowplaying) {
-        setStatus("online");
-      } else {
+      if (!data || !data.recenttracks || !data.recenttracks.track?.length) {
         setStatus("offline");
+        return;
       }
+
+      const recentTrack = data.recenttracks.track[0];
+      const isNowPlaying = recentTrack?.["@attr"]?.nowplaying === "true";
+
+      setStatus(isNowPlaying ? "online" : "offline");
     } catch (err) {
       console.error(err);
       setStatus("Error fetching data");
     }
   };
+
   useEffect(() => {
     nowPlaying();
     const interval = setInterval(nowPlaying, 30000);
