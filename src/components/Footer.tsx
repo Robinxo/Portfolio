@@ -26,7 +26,7 @@ export const Footer = (): React.JSX.Element => {
 
   const nowPlaying = async () => {
     try {
-      const data: LastFMResponse = await FetchLastFM();
+      const data: LastFMResponse | null = await FetchLastFM();
       const recentTracks = data.recenttracks.track[0];
 
       if (recentTracks?.["@attr"]?.nowplaying) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Typewriter from "typewriter-effect";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -68,8 +68,6 @@ export const LandingPage = (): React.JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             href={Links.linkedin}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
             className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
           >
             <svg
