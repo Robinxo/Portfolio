@@ -10,15 +10,14 @@ import { Layout } from "./components/Layout";
 
 function App(): React.JSX.Element {
   useEffect(() => {
-    async function sendData() {
-      await fetch(`${BACKEND_URL}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: "visitor detected" }),
-      });
-    }
-
-    sendData();
+    const trackVisit = async () => {
+      try {
+        await fetch(`${BACKEND_URL}`);
+      } catch (err) {
+        console.error("❌ Error tracking visit:", err);
+      }
+    };
+    trackVisit();
   }, []);
 
   const { ref: aboutRef, inView: aboutVisible } = useInView({
