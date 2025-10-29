@@ -1,14 +1,26 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const About = lazy(() => import("./components/About.tsx"));
 const Projects = lazy(() => import("./components/Projects.tsx"));
 import "./App.css";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 import { LandingPage } from "./components/LandingPage";
 import { Layout } from "./components/Layout";
 
 function App(): React.JSX.Element {
+  useEffect(() => {
+    async function sendData() {
+      await fetch(`${BACKEND_URL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: "visitor detected" }),
+      });
+    }
+
+    sendData();
+  }, []);
+
   const { ref: aboutRef, inView: aboutVisible } = useInView({
     delay: 100,
     triggerOnce: true,

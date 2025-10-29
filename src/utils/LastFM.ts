@@ -4,7 +4,6 @@ import type { AxiosResponse } from "axios";
 const last = import.meta.env.VITE_LASTFM_API;
 
 const FetchLastFM = async <T = unknown>(): Promise<T | null> => {
-  console.log(last);
   try {
     const res: AxiosResponse<T> = await axios.get(last);
 
