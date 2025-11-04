@@ -83,7 +83,7 @@ export const LandingPage = (): React.JSX.Element => {
     Stormy: {
       img: "https://i.pinimg.com/originals/a2/75/0e/a2750ea85f34b50b9cb30d870b720b97.gif",
       color: "shadow-purple-200/40",
-      message: (w, c) => `Thunder rolls over ${c} — stay safe! ⚡`,
+      message: (w, c) => `${w} Thunder rolls over ${c} — stay safe! ⚡`,
     },
   };
 

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useState } from "react";
+import React, { Suspense, lazy } from "react";
 import { useInView } from "react-intersection-observer";
 
 const About = lazy(() => import("./components/About.tsx"));
