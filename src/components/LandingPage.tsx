@@ -34,6 +34,7 @@ export const LandingPage = (): React.JSX.Element => {
   }, []);
   const weather = data?.actual;
   const city = data?.city;
+  console.log(weather, city);
 
   const weatherVisuals: Record<
     string,
