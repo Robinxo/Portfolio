@@ -216,10 +216,7 @@ export const LandingPage = (): React.JSX.Element => {
             className={`mx-auto w-[280px] sm:w-[320px] md:w-[480px] rounded-xl shadow-lg ${weatherVisuals[weather].color}`}
           />
           <p className="justify-center pt-5 text-amber-200 font-mono">
-            {weatherVisuals[weather].message(
-              weather,
-              data?.city || "your area",
-            )}
+            {weatherVisuals[weather].message(weather, city || "your area")}
           </p>
         </div>
       )}
