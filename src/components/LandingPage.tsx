@@ -27,7 +27,7 @@ export const LandingPage = (): React.JSX.Element => {
         const getit = await res.json();
         SetDataa(getit);
       } catch (err) {
-        console.error("❌ Error tracking visit:", err);
+        console.error("Error tracking visit:", err);
       }
     };
     trackVisit();
