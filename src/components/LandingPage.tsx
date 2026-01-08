@@ -193,7 +193,7 @@ export const LandingPage = (): React.JSX.Element => {
         {/* Resume */}
         <a
           target="_blank"
-          href={Links.email}
+          href={Links.pdf}
           className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
         >
           <svg
