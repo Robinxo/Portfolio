@@ -62,6 +62,7 @@ export default function Projects(): React.JSX.Element {
                 strings: `
   <strong style="color:#f43f5e;">Title:</strong> Tanvi Premium Group<br/>
   <strong style="color:#f43f5e;">Stack:</strong> React, Astro, TailwindCSS<br/>
+  <strong style="color:#f43f5e;">Deployment:</strong> Netlify</br>
   <strong style="color:#f43f5e;">Description:</strong> Originally built this website using React, Vite, and TailwindCSS, then migrated it to Astro to achieve better SEO, faster load times, and smoother performance.</br>
   <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/HS-Astro#" style="color:#90D5FF">github.com/Robinxo/HS-Astro</a></br>
   <strong style="color:#f43f5e;">Url:</strong> <a target="_blank" href="https://tanvipremiumgroup.com/" style="color:#90D5FF">tanvipremiumgroup.com</a>
@@ -94,11 +95,11 @@ export default function Projects(): React.JSX.Element {
               {
                 strings: `
   <strong style="color:#f43f5e;">Title:</strong> Movie booking application</br>
-
 <strong style="color:#f43f5e;">Stack:</strong>
 <span style="display:inline-block; max-width:100%;">
   React, Express, TailwindCSS, MongoDB, Node, Bun
 </span><br/>
+  <strong style="color:#f43f5e;">Deployment:</strong> Frontend - Netlify , backend - Render.</br>
   <strong style="color:#f43f5e;">Description:</strong> Built a full-stack web app as my final year project with secure user login, an admin panel, live booking, token-based authentication, multiple APIs, middleware, and protected routes all working together seamlessly.</br>
   <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/Movie-booking" style="color:#90D5FF">github.com/Robinxo/Movie-booking</a></br>
   <strong style="color:#f43f5e;">Url:</strong> <a target="_blank" href="https://frolicking-fairy-9e5986.netlify.app/" style="color:#90D5FF">Movie booking application </a>
@@ -132,6 +133,7 @@ export default function Projects(): React.JSX.Element {
                 strings: `                
   <strong style="color:#f43f5e;">Title:</strong>portfolio<br/>
   <strong style="color:#f43f5e;">Stack:</strong> React,TailwindCSS,Bun<br/>
+  <strong style="color:#f43f5e;">Deployment:</strong> Frontend - Netlify , backend - Vercel.</br>
   <strong style="color:#f43f5e;">Description:</strong> This site that you are scrolling through.</br>
   <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/Movie-booking" style="color:#90D5FF">github.com/Robinxo/Movie-booking</a></br>
   <strong style="color:#f43f5e;">Url:</strong> <a target="_blank" href="/" style="color:#90D5FF">portfolio</a>
