@@ -12,7 +12,6 @@ export default function About(): React.ReactElement {
         <p className="text-xs text-gray-500 ml-3">om@portfolio:~</p>
       </div>
 
-      {/* Terminal content */}
       <div className="space-y-3">
         <p>
           <span className="text-emerald-400 font-semibold animate-pulse">
@@ -33,7 +32,7 @@ export default function About(): React.ReactElement {
             options={
               {
                 strings:
-                  "Om Rawat here really into full stack development and being on my terminal coding as you can see how much i love terminal my whole site theme is  based that.",
+                  "Full-stack developer focused on building clean, scalable web applications using modern JavaScript stacks. I prefer terminal-first workflows and care about writing code that stays readable and maintainable.",
                 autoStart: true,
                 cursor: "",
                 delay: 10,
@@ -41,7 +40,6 @@ export default function About(): React.ReactElement {
             }
           />
         </p>
-
         <p className="mt-4">
           <span className="text-emerald-400 font-semibold animate-pulse">
             <Typewriter
@@ -60,8 +58,17 @@ export default function About(): React.ReactElement {
           <Typewriter
             options={
               {
-                strings:
-                  "<li>JavaScript</li><li>React</li><li>Node.js</li><li>TypeScript</li><li>Express</li><li>MongoDB</li><li>TailwindCSS</li><li>Vite</li><li>PHP</li> <li>Bun</li><li>C++</li>",
+                strings: `<li>JavaScript</li>
+                          <li>React</li>
+                          <li>Node.js</li>
+                          <li>TypeScript</li>
+                          <li>Express</li>
+                          <li>MongoDB</li>
+                          <li>TailwindCSS</li>
+                          <li>Vite</li>
+                          <li>PHP</li>
+                          <li>Bun</li>
+                          <li>C++</li>`,
                 autoStart: true,
                 cursor: "",
                 delay: 10,
@@ -69,13 +76,12 @@ export default function About(): React.ReactElement {
             }
           />
         </p>
-
         <p className="mt-4">
           <span className="text-emerald-400 font-semibold animate-pulse">
             <Typewriter
               options={
                 {
-                  strings: "> coming soon",
+                  strings: "> what-i-build",
                   autoStart: true,
                   cursor: "",
                   delay: 10,
@@ -88,7 +94,10 @@ export default function About(): React.ReactElement {
           <Typewriter
             options={
               {
-                strings: "",
+                strings: `<li>Full-stack apps with auth, roles, dashboards</li>
+                          <li>REST APIs with validation and error handling</li>
+                          <li>Responsive UI systems</li>
+                          <li>Internal tools and small experiments</li>`,
                 autoStart: true,
                 cursor: "",
                 delay: 10,
@@ -96,13 +105,12 @@ export default function About(): React.ReactElement {
             }
           />
         </p>
-
         <p className="mt-4">
           <span className="text-emerald-400 font-semibold animate-pulse">
             <Typewriter
               options={
                 {
-                  strings: "",
+                  strings: "> how-i-work",
                   autoStart: true,
                   cursor: "",
                   delay: 10,
@@ -111,7 +119,49 @@ export default function About(): React.ReactElement {
             />
           </span>
         </p>
-        <p className="ml-4 text-gray-300"></p>
+        <p className="ml-4 text-gray-300">
+          <Typewriter
+            options={
+              {
+                strings: `<li>Design APIs before UI</li>
+                          <li>Break problems into small parts</li>
+                          <li>Prefer clarity over clever tricks</li>
+                          <li>Optimize after correctness</li>
+                          <li>Care about long-term maintainability</li>`,
+                autoStart: true,
+                cursor: "",
+                delay: 10,
+              } as const
+            }
+          />
+        </p>
+        <p className="mt-4">
+          <span className="text-emerald-400 font-semibold animate-pulse">
+            <Typewriter
+              options={
+                {
+                  strings: "> now",
+                  autoStart: true,
+                  cursor: "",
+                  delay: 10,
+                } as const
+              }
+            />
+          </span>
+        </p>
+        <p className="ml-4 text-gray-300">
+          <Typewriter
+            options={
+              {
+                strings: `<li>Deepening backend and system design skills</li>
+                          <li>Actively looking for junior full-stack / frontend roles</li>`,
+                autoStart: true,
+                cursor: "",
+                delay: 10,
+              } as const
+            }
+          />
+        </p>
       </div>
     </div>
   );

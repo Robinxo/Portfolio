@@ -6,6 +6,7 @@ const Projects = lazy(() => import("./components/Projects.tsx"));
 import "./App.css";
 import { LandingPage } from "./components/LandingPage";
 import { Layout } from "./components/Layout";
+import { Contact } from "./components/Contact.tsx";
 
 function App(): React.JSX.Element {
   const { ref: aboutRef, inView: aboutVisible } = useInView({
@@ -43,6 +44,20 @@ function App(): React.JSX.Element {
               }
             >
               {aboutVisible && <About />}
+            </Suspense>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div ref={aboutRef}>
+            <Suspense
+              fallback={
+                <p className="text-center mt-10 animate-pulse">
+                  Loading about...
+                </p>
+              }
+            >
+              {aboutVisible && <Contact />}
             </Suspense>
           </div>
         </section>
