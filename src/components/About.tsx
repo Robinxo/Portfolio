@@ -1,5 +1,18 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import Marquee from "react-fast-marquee";
+
+import {
+  Cpp,
+  Js,
+  Ts,
+  Tailwindcss,
+  Php,
+  ReactIcon,
+  Express,
+  Mongodb,
+  Nodejs,
+} from "../icons/Svg.ts";
 
 export default function About(): React.ReactElement {
   return (
@@ -55,26 +68,35 @@ export default function About(): React.ReactElement {
           </span>
         </p>
         <p className="ml-4 text-gray-300">
-          <Typewriter
-            options={
-              {
-                strings: `<li>JavaScript</li>
-                          <li>React</li>
-                          <li>Node.js</li>
-                          <li>TypeScript</li>
-                          <li>Express</li>
-                          <li>MongoDB</li>
-                          <li>TailwindCSS</li>
-                          <li>Vite</li>
-                          <li>PHP</li>
-                          <li>Bun</li>
-                          <li>C++</li>`,
-                autoStart: true,
-                cursor: "",
-                delay: 10,
-              } as const
-            }
-          />
+          <Marquee autoFill={true} speed={100} pauseOnHover={true}>
+            <div className="mx-4">
+              <Cpp width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Js width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Ts width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Tailwindcss width={40} height={50} />
+            </div>
+            <div className="mx-4">
+              <Php width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <ReactIcon width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Express width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Mongodb width={50} height={50} />
+            </div>
+            <div className="mx-4">
+              <Nodejs width={50} height={50} />
+            </div>
+          </Marquee>
         </p>
         <p className="mt-4">
           <span className="text-emerald-400 font-semibold animate-pulse">

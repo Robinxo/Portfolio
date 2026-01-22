@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from "react";
 import { useInView } from "react-intersection-observer";
+import "./App.css";
 
 const About = lazy(() => import("./components/About.tsx"));
 const Projects = lazy(() => import("./components/Projects.tsx"));
-import "./App.css";
 import { LandingPage } from "./components/LandingPage";
 import { Layout } from "./components/Layout";
 import { Contact } from "./components/Contact.tsx";

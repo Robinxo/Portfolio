@@ -9,8 +9,7 @@ export const Contact = (): React.JSX.Element => {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", "b53b42c4-5d52-4ddc-87f8-87bd47c00547");
-
+    formData.append("access_key", import.meta.env.VITE_API_ACCESS_KEY);
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
