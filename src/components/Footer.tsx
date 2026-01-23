@@ -51,7 +51,7 @@ export const Footer = (): React.JSX.Element => {
 
   return (
     <>
-      <div className="bg-[#09090B] h-25 fixed bottom-0 right-0 left-0 px-4 sm:h-20 sm:px-6 md:px-10 lg:px-15 xl:px-60">
+      <div className="bg-[#09090B] h-25 fixed bottom-0 right-0 left-0 px-4 sm:h-20 sm:px-6 md:px-10 lg:px-15 xl:px-60 z-100">
         <nav className="flex flex-col justify-center items-center font-mono text-[14px] py-3 space-x-1 sm:text-1xl sm:flex sm:flex-row sm:space-x-9 md:space-x-14 lg:space-x-30 xl:space-x-25 ">
           <p className="text-amber-50 font-mono">📍 Based in India</p>
           <p className="text-amber-50 font-mono">

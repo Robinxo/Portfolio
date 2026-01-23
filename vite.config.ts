@@ -7,6 +7,8 @@ import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
+
+  // server: { allowedHosts: ["https://dirty-results-warn.loca.lt/"] },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

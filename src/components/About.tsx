@@ -1,18 +1,47 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Marquee from "react-fast-marquee";
-
 import {
   Cpp,
   Js,
   Ts,
   Tailwindcss,
-  Php,
   ReactIcon,
-  Express,
   Mongodb,
-  Nodejs,
+  Css3,
+  Express,
+  Git,
+  Github,
+  Html,
+  Nextjs,
+  Node,
+  Docker,
+  Netlify,
+  MySql,
+  Python,
+  Django,
 } from "../icons/Svg.ts";
+
+const icons = [
+  Cpp,
+  Js,
+  Ts,
+  Tailwindcss,
+  ReactIcon,
+  Mongodb,
+  Css3,
+  Express,
+  Git,
+  Github,
+  Html,
+  Nextjs,
+  Node,
+  Docker,
+  Netlify,
+  MySql,
+  Python,
+  Django,
+];
 
 export default function About(): React.ReactElement {
   return (
@@ -67,34 +96,15 @@ export default function About(): React.ReactElement {
             />
           </span>
         </p>
+
         <p className="ml-4 text-gray-300">
           <Marquee autoFill={true} speed={100} pauseOnHover={true}>
-            <div className="mx-4">
-              <Cpp width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Js width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Ts width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Tailwindcss width={40} height={50} />
-            </div>
-            <div className="mx-4">
-              <Php width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <ReactIcon width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Express width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Mongodb width={50} height={50} />
-            </div>
-            <div className="mx-4">
-              <Nodejs width={50} height={50} />
+            <div className="flex items-center">
+              {icons.map((Icon, index) => (
+                <div key={index} className="mx-4">
+                  <Icon className="size-15 text-gray-300 hover:text-emerald-400 transition" />
+                </div>
+              ))}
             </div>
           </Marquee>
         </p>
