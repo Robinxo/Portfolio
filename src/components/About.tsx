@@ -49,9 +49,42 @@ export default function About(): React.ReactElement {
     <div className="bg-[#0a0a0a] text-[#e5e5e5] font-mono rounded-lg shadow-xl mx-auto border border-[#1f1f1f] w-full max-w-3xl p-6 relative overflow-hidden mb-10 lg:max-w-11/12 lg:px-10 min-h-screen">
       {/* Fake terminal header */}
       <div className="flex items-center gap-2 mb-4">
-        <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-        <span className="w-3 h-3 bg-yellow-400 rounded-full"></span>
-        <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+        <motion.span
+          className="w-3 h-3 bg-red-500 rounded-full"
+          whileHover={{
+            scale: 1.2,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: "tween",
+            duration: 0.12,
+            ease: "easeOut",
+          }}
+        ></motion.span>
+        <motion.span
+          className="w-3 h-3 bg-yellow-400 rounded-full"
+          whileHover={{
+            scale: 1.2,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: "tween",
+            duration: 0.12,
+            ease: "easeOut",
+          }}
+        ></motion.span>
+        <motion.span
+          className="w-3 h-3 bg-green-500 rounded-full"
+          whileHover={{
+            scale: 1.2,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: "tween",
+            duration: 0.12,
+            ease: "easeOut",
+          }}
+        ></motion.span>
         <p className="text-xs text-gray-500 ml-3">om@portfolio:~</p>
       </div>
 

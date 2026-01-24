@@ -55,7 +55,7 @@ export const Footer = (): React.JSX.Element => {
         <nav className="flex flex-col justify-center items-center font-mono text-[14px] py-3 space-x-1 sm:text-1xl sm:flex sm:flex-row sm:space-x-9 md:space-x-14 lg:space-x-30 xl:space-x-25 ">
           <p className="text-amber-50 font-mono">📍 Based in India</p>
           <p className="text-amber-50 font-mono">
-            © 2025 Om Rawat — Designed & Built by Me
+            © 2026 Om Rawat — Designed & Built by Me
           </p>
           <span className="flex flex-row gap-2 items-center">
             <svg

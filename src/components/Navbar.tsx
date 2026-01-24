@@ -20,7 +20,7 @@ export const Navbar = (): React.JSX.Element => {
           about
         </a>
         <a
-          href=""
+          href="#contact"
           className="text-amber-50 hover:text-amber-200 transition-colors"
         >
           contact
