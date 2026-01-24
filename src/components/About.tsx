@@ -1,6 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
 import {
   Cpp,
   Js,
@@ -96,14 +97,25 @@ export default function About(): React.ReactElement {
             />
           </span>
         </p>
-
         <p className="ml-4 text-gray-300">
           <Marquee autoFill={true} speed={100} pauseOnHover={true}>
             <div className="flex items-center">
               {icons.map((Icon, index) => (
-                <div key={index} className="mx-4">
+                <motion.div
+                  key={index}
+                  className="mx-5"
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{
+                    type: "tween",
+                    duration: 0.09,
+                    ease: "easeOut",
+                  }}
+                >
                   <Icon className="size-15 text-gray-300 hover:text-emerald-400 transition" />
-                </div>
+                </motion.div>
               ))}
             </div>
           </Marquee>

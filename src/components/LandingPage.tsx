@@ -1,6 +1,7 @@
 import Typewriter from "typewriter-effect";
 import Tooltip from "@mui/material/Tooltip";
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 // const BACKEND_URL = "http://localhost:3000";
@@ -108,11 +109,20 @@ export const LandingPage = (): React.JSX.Element => {
 
       <nav className="flex flex-wrap justify-center gap-5">
         {/* GitHub */}
-        <a
-          target="_blank"
+        <motion.a
+          whileHover={{
+            scale: 1.2,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: "tween",
+            duration: 0.09,
+            ease: "easeOut",
+          }}
           rel="noopener noreferrer"
+          target="_blank"
+          className="flex items-center gap-3 rounded-xl bg-[#18181B] px-6 py-3 text-base font-mono font-bold tracking-wide text-zinc-200  hover:text-amber-200 transition-colors shadow-md hover:shadow-lg hover:bg-[#1f1f22] cursor-pointer"
           href={Links.github}
-          className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
         >
           <svg
             viewBox="0 0 25 25"
@@ -136,14 +146,23 @@ export const LandingPage = (): React.JSX.Element => {
             />
           </svg>
           <span className="hidden md:block ">GitHub</span>
-        </a>
+        </motion.a>
         <Tooltip title="Let's connect?" arrow>
           {/* LinkedIn */}
-          <a
-            target="_blank"
+          <motion.a
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{ scale: 0.95 }}
             rel="noopener noreferrer"
+            transition={{
+              type: "tween",
+              duration: 0.09,
+              ease: "easeOut",
+            }}
+            className="flex items-center gap-3 rounded-xl bg-[#18181B] px-6 py-3 text-base font-mono font-bold tracking-wide text-zinc-200  hover:text-amber-200 transition-colors shadow-md hover:shadow-lg hover:bg-[#1f1f22] cursor-pointer"
+            target="_blank"
             href={Links.linkedin}
-            className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
           >
             <svg
               viewBox="0 0 25 25"
@@ -171,13 +190,23 @@ export const LandingPage = (): React.JSX.Element => {
               />
             </svg>
             <span className="hidden md:block">LinkedIn</span>
-          </a>
+          </motion.a>
         </Tooltip>
         {/* Email */}
-        <a
+        <motion.a
+          whileHover={{
+            scale: 1.2,
+          }}
+          whileTap={{ scale: 0.95 }}
+          rel="noopener noreferrer"
+          transition={{
+            type: "tween",
+            duration: 0.09,
+            ease: "easeOut",
+          }}
           target="_blank"
+          className="flex items-center gap-3 rounded-xl bg-[#18181B] px-6 py-3 text-base font-mono font-bold tracking-wide text-zinc-200  hover:text-amber-200 transition-colors shadow-md hover:shadow-lg hover:bg-[#1f1f22] cursor-pointer"
           href={Links.email}
-          className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
         >
           <svg
             fill="currentColor"
@@ -188,13 +217,23 @@ export const LandingPage = (): React.JSX.Element => {
             <path d="M1 5H2V4H20V5H21V18H20V19H2V18H1V5M3 17H19V9H18V10H16V11H14V12H12V13H10V12H8V11H6V10H4V9H3V17M19 6H3V7H5V8H7V9H9V10H13V9H15V8H17V7H19V6Z" />
           </svg>
           <span className="hidden md:block">Email</span>
-        </a>
+        </motion.a>
 
         {/* Resume */}
-        <a
+        <motion.a
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{ scale: 0.95 }}
+          rel="noopener noreferrer"
+          transition={{
+            type: "tween",
+            duration: 0.09,
+            ease: "easeOut",
+          }}
           target="_blank"
+          className="flex items-center gap-3 rounded-xl bg-[#18181B] px-6 py-3 text-base font-mono font-bold tracking-wide text-zinc-200  hover:text-amber-200 transition-colors shadow-md hover:shadow-lg hover:bg-[#1f1f22] cursor-pointer"
           href={Links.pdf}
-          className="flex items-center gap-2 rounded-lg bg-[#18181B] px-4 py-2 text-sm font-mono font-semibold text-zinc-200 hover:text-amber-200 transition-all shadow-sm hover:shadow-md hover:bg-[#1f1f22]"
         >
           <svg
             fill="currentColor"
@@ -205,7 +244,7 @@ export const LandingPage = (): React.JSX.Element => {
             <path d="M15 3V4H16V5H17V6H18V7H19V8H20V9H21V18H20V19H2V18H1V4H2V3H15M15 6H14V10H18V9H17V8H16V7H15V6M3 5V17H19V12H13V11H12V5H3Z" />
           </svg>
           <span className="hidden md:block">Resume</span>
-        </a>
+        </motion.a>
       </nav>
 
       {weather && weatherVisuals[weather] && (

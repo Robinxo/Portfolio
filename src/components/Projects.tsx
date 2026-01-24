@@ -33,7 +33,7 @@ export default function Projects(): React.JSX.Element {
           <Typewriter
             options={
               {
-                strings: "TanviPremiumGroup/ Movie-Booking/ portfolio/",
+                strings: "TanviPremiumGroup/ Movie-Booking/ craftySocial/",
                 autoStart: true,
                 cursor: "",
                 delay: 10,
@@ -82,7 +82,6 @@ export default function Projects(): React.JSX.Element {
   <strong style="color:#f43f5e;">Deployment:</strong> Netlify</br>
   <strong style="color:#f43f5e;">Description:</strong> Originally built this website using React, Vite, and TailwindCSS, then migrated it to Astro to achieve better SEO, faster load times, and smoother performance.</br>
   <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/HS-Astro#" style="color:#90D5FF">github.com/Robinxo/HS-Astro</a></br>
-  <strong style="color:#f43f5e;">Url:</strong> <a target="_blank" href="https://tanvipremiumgroup.com/" style="color:#90D5FF">tanvipremiumgroup.com</a>
 `,
                   autoStart: true,
                   cursor: "",
@@ -115,7 +114,7 @@ export default function Projects(): React.JSX.Element {
               rel="noopener noreferrer"
             >
               <motion.img
-                src="/tanvipremium.png"
+                src="/movieBooking.png"
                 className=" w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg "
                 whileHover={{
                   scale: 1.1,
@@ -136,7 +135,6 @@ export default function Projects(): React.JSX.Element {
                         <strong style="color:#f43f5e;">Deployment:</strong> Frontend - Netlify , backend - Render.</br>
                         <strong style="color:#f43f5e;">Description:</strong> Built a full-stack web app as my final year project with secure user login, an admin panel, live booking, token-based authentication, multiple APIs, middleware, and protected routes all working together seamlessly.</br>
                         <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/Movie-booking" style="color:#90D5FF">github.com/Robinxo/Movie-booking</a></br>
-                        <strong style="color:#f43f5e;">Url:</strong> <a target="_blank" href="https://frolicking-fairy-9e5986.netlify.app/" style="color:#90D5FF">Movie booking application </a>
 `,
                   autoStart: true,
                   cursor: "",
