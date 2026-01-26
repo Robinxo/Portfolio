@@ -4,6 +4,7 @@ import "./App.css";
 
 const About = lazy(() => import("./components/About.tsx"));
 const Projects = lazy(() => import("./components/Projects.tsx"));
+
 import { LandingPage } from "./components/LandingPage";
 import { Layout } from "./components/Layout";
 import { Contact } from "./components/Contact.tsx";
