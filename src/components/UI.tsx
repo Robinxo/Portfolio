@@ -1,19 +1,9 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import Typewriter from "typewriter-effect";
 
-type TerminalTypewriterProps = {
-  text: string;
-  className?: string;
-};
 interface UIProps {
   children: React.ReactNode;
 }
-type CardImagesProp = {
-  Link: string;
-  imageUrl: string;
-  children: React.ReactNode;
-};
 
 const UI = ({ children }: UIProps) => {
   return (
@@ -101,6 +91,82 @@ const Form = () => {
   );
 };
 
+import Marquee from "react-fast-marquee";
+import {
+  Cpp,
+  Js,
+  Ts,
+  Tailwindcss,
+  ReactIcon,
+  Mongodb,
+  Css3,
+  Express,
+  Git,
+  Github,
+  Html,
+  Nextjs,
+  Node,
+  Docker,
+  Netlify,
+  MySql,
+  Python,
+  Django,
+} from "../icons/Svg.ts";
+const icons = [
+  Cpp,
+  Js,
+  Ts,
+  Tailwindcss,
+  ReactIcon,
+  Mongodb,
+  Css3,
+  Express,
+  Git,
+  Github,
+  Html,
+  Nextjs,
+  Node,
+  Docker,
+  Netlify,
+  MySql,
+  Python,
+  Django,
+];
+
+const IconsMarquee = () => {
+  return (
+    <p className="ml-4 text-gray-300">
+      <Marquee autoFill={true} speed={100} pauseOnHover={true}>
+        <div className="flex items-center">
+          {icons.map((Icon, index) => (
+            <motion.div
+              key={index}
+              className="mx-5"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{
+                type: "tween",
+                duration: 0.09,
+                ease: "easeOut",
+              }}
+            >
+              <Icon className="size-15 text-gray-300 hover:text-emerald-400 transition" />
+            </motion.div>
+          ))}
+        </div>
+      </Marquee>
+    </p>
+  );
+};
+
+type CardImagesProp = {
+  Link: string;
+  imageUrl: string;
+  children: React.ReactNode;
+};
+
 const CardImages = ({ children, imageUrl, Link }: CardImagesProp) => {
   return (
     <section className="ml-4 text-gray-300">
@@ -120,6 +186,13 @@ const CardImages = ({ children, imageUrl, Link }: CardImagesProp) => {
       </div>
     </section>
   );
+};
+
+import Typewriter from "typewriter-effect";
+
+type TerminalTypewriterProps = {
+  text: string;
+  className?: string;
 };
 
 function TerminalTypewriter({ text, className = "" }: TerminalTypewriterProps) {
@@ -157,4 +230,11 @@ const TerminalTypewriterOutput = ({ text }: TerminalTypewriterProps) => {
   );
 };
 
-export { UI, TerminalTypewriter, TerminalTypewriterOutput, Form, CardImages };
+export {
+  UI,
+  TerminalTypewriter,
+  TerminalTypewriterOutput,
+  Form,
+  CardImages,
+  IconsMarquee,
+};
