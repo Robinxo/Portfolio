@@ -34,7 +34,6 @@ function App(): React.JSX.Element {
             </Suspense>
           </div>
         </section>
-
         <section id="about">
           <div ref={aboutRef}>
             <Suspense
@@ -48,7 +47,6 @@ function App(): React.JSX.Element {
             </Suspense>
           </div>
         </section>
-
         <section id="contact">
           <div ref={aboutRef}>
             <Suspense

@@ -4,7 +4,6 @@ import { useState } from "react";
 interface UIProps {
   children: React.ReactNode;
 }
-
 const UI = ({ children }: UIProps) => {
   return (
     <div className="bg-[#0a0a0a] text-[#e5e5e5] font-mono rounded-lg shadow-xl mx-auto border border-[#1f1f1f] w-full max-w-3xl p-6 relative overflow-hidden mb-10 lg:max-w-11/12 lg:px-10">
@@ -30,7 +29,7 @@ const UI = ({ children }: UIProps) => {
           ></motion.span>
           <p className="text-xs text-gray-500 ml-3">om@portfolio:~</p>
         </div>
-        <main className="flex-1"> {children}</main>
+        <main className="flex-1">{children}</main>
       </div>
     </div>
   );
@@ -53,7 +52,6 @@ const Form = () => {
     const data = await response.json();
     setResult(data.success ? "Success!" : "Error");
   };
-
   return (
     <form onSubmit={onSubmit} className="font-mono text-sm space-y-2 pb-20">
       <input
