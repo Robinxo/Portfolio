@@ -14,6 +14,7 @@ function App(): React.JSX.Element {
     delay: 100,
     triggerOnce: true,
   });
+
   return (
     <>
       <Layout>
