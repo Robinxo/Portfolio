@@ -12,7 +12,9 @@ export default function Projects(): React.JSX.Element {
     <UI>
       <TerminalTypewriter text="> ls projects/" />
       <TerminalTypewriterOutput
-        text={"tanvipremiumgroup/ movie-booking/ craftysocial/"}
+        text={
+          "tanvipremiumgroup/ movie-booking/ craftysocial/ davidthetreeguy/"
+        }
       />
       <TerminalTypewriter text="> cat TanviPremiumGroup/details.txt" />
       <CardImages
@@ -75,6 +77,28 @@ export default function Projects(): React.JSX.Element {
 <strong style="color:#f43f5e;">Deployment:</strong> Frontend - Netlify, Backend - Vercel<br/>
 <strong style="color:#f43f5e;">Description:</strong> A modern social media platform designed for interactive user engagement, responsive design, and efficient performance.<br/>
 <strong style="color:#f43f5e;">Github:</strong> <a target="_blank" href="https://github.com/Robinxo/Crafty-Social" style="color:#90D5FF">github.com/Robinxo/Crafty-Social</a><br/>
+   `,
+              autoStart: true,
+              cursor: "",
+              delay: 0,
+            } as const
+          }
+        />
+      </CardImages>
+      <TerminalTypewriter text="> cat davidthetreeguy/details.txt" />
+      <CardImages
+        imageUrl="/davidthetreeguy.png"
+        Link="https://69c27c6d39fb2286ddc2d38a--delicate-mandazi-17f075.netlify.app/"
+      >
+        <Typewriter
+          options={
+            {
+              strings: `                
+<strong style="color:#f43f5e;">Title:</strong> David the tree guy<br/>
+<strong style="color:#f43f5e;">Stack:</strong> NextJS, TailwindCSS, Bun<br/>
+<strong style="color:#f43f5e;">Deployment:</strong> Frontend - Netlify, Backend - Vercel<br/>
+<strong style="color:#f43f5e;">Description:</strong> 
+A modern, responsive website for a tree cutting business that enables easy service exploration, quick quote requests, and efficient customer engagement with a focus on performance and professionalism.
    `,
               autoStart: true,
               cursor: "",
